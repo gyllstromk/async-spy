@@ -1,0 +1,26 @@
+{
+  "name": "async-spy",
+  "version": "0.0.0",
+  "description": "Asynchronous function spying for tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gyllstromk/async-spy.git"
+  },
+  "author": "Karl Gyllstrom",
+  "license": "BSD",
+  "keywords": [
+    "async",
+    "spy",
+    "test"
+  ],
+  "bugs": {
+    "url": "https://github.com/gyllstromk/async-spy/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0"
+  }
+}
