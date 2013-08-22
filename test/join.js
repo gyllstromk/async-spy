@@ -1,4 +1,4 @@
-var join = require('../lib/join');
+var join = require('../').join;
 
 describe('join', function () {
     var sync = function (callback) {

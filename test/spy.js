@@ -1,4 +1,4 @@
-var spy = require('../index');
+var spy = require('../').spy;
 
 var assert = require('assert');
 
