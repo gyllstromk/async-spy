@@ -23,10 +23,24 @@ describe('join', function () {
         sync(j());
     });
 
+    it('synchronous with callback', function (done) {
+        var j = join(done),
+            j2 = join(j);
+
+        sync(j2(j()));
+    });
+
     it('asynchronous', function (done) {
         var j = join(done);
         async(j());
         async(j());
+    });
+
+    it('asynchronous with callback', function (done) {
+        var j = join(done),
+            j2 = join(j);
+
+        async(j2(j()));
     });
 
     it('mixed', function (done) {
