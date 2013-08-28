@@ -55,6 +55,13 @@ describe('join', function () {
         async(j2(j()));
     });
 
+    it('asynchronous with callback and expectCall', function (done) {
+        var j = join(done),
+            j2 = join(j);
+
+        async(j2.expectCall(j()));
+    });
+
     it('mixed', function (done) {
         var j = join(done);
         sync(j());
