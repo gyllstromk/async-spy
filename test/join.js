@@ -23,6 +23,12 @@ describe('join', function () {
         sync(j());
     });
 
+    it('synchronous', function (done) {
+        var j = join(done);
+        sync(j.expectCall());
+        sync(j.expectCall());
+    });
+
     it('synchronous with callback', function (done) {
         var j = join(done),
             j2 = join(j);
@@ -34,6 +40,12 @@ describe('join', function () {
         var j = join(done);
         async(j());
         async(j());
+    });
+
+    it('asynchronous', function (done) {
+        var j = join(done);
+        async(j.expectCall());
+        async(j.expectCall());
     });
 
     it('asynchronous with callback', function (done) {
